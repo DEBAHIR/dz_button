@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      age: 2
+      age: 25
     }
   }
 }
