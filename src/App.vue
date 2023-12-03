@@ -1,28 +1,16 @@
 <template>
   <div>
-    <p>{{ text }}</p>
-   <button @click="change1">Менять текст</button>
-   <button @click="change2">Ага</button>
+    <p v-if="age < 18">подросток</p>
+    <p v-else-if="age >= 19 && age <= 25">молодой человек</p>
+    <p v-else>мужчина</p>
   </div>
 </template>
 
-<style>
-
-</style>
-
 <script>
-export default{
-  data(){
-    return{
-      text: 'Привет',
-    }
-  },
-  methods: {
-    change1: function() {
-      this.text = 'Пока';
-    },
-    change2: function() {
-      this.text = 'Ага'
+export default {
+  data() {
+    return {
+      age: 2
     }
   }
 }
