@@ -15,3 +15,39 @@ export default {
   }
 }
 </script>
+
+<template>
+  <table>
+    <tr v-for="product in products" :key="products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
+    </tr>
+  </table>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      products: [
+        {
+          name: 'product1',
+          price: 100,
+          quantity: 5,
+        },
+        {
+          name: 'product2',
+          price: 200,
+          quantity: 4,
+        },
+        {
+          name: 'product3',
+          price: 300,
+          quantity: 3,
+        },
+      ]
+    }
+  }
+}
+</script>
